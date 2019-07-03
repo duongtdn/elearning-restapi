@@ -4,7 +4,8 @@
   "description": "express routes implemented apis for elearning server",
   "main": "src/main.js",
   "scripts": {
-    "test": "npm test"
+    "test": "npm test",
+    "start": "node example/server"
   },
   "repository": {
     "type": "git",
