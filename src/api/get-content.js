@@ -1,5 +1,7 @@
 "use strict"
 
+const jwt = require('jsonwebtoken')
+
 function validateParams() {
   return function(req, res, next) {
     if (req.query.c) {
@@ -12,7 +14,6 @@ function validateParams() {
 
 function authen() {
   return function(req, res, next) {
-
     const bearerHeader = req.headers['authorization']
     if (typeof bearerHeader === 'undefined') {
       res.status(401).json({ explaination: 'Unauthorized' })
@@ -46,4 +47,4 @@ function getContent(helpers) {
   }
 }
 
-module.exports = [validateParams, getContent] // disable authen for now, will enable later when client is ready
+module.exports = [validateParams, authen, getContent]
