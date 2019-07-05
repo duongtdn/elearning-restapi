@@ -5,35 +5,38 @@ const Contents = [
     id: 'c-01',
     topics: [
       {
+        id: 't1',
         part: 'p1',
         title: 'Epic songs cover from Youtube',
         lessons: [
-          { title: 'Game of Thrones - Main Title cover by Mark Fowler', player: 'youtube', uri: 'X6a9odk6b_c' },
-          { title: 'The Lord of The Rings - Piano cover by Mark Fowler', player: 'youtube', uri: 'VsjzB7GRZeA' },
-          { title: 'The Lord of The Rings - Cover by Linsay Stirling', player: 'youtube', uri: 'dQiNVk_u0po' },
-          { title: 'The Elder Scrolls: Skyrim - Piano cover by Mark Fowler', player: 'youtube', uri: 'no3B0uS6nLk' },
-          { title: 'The Elder Scrolls: Skyrim Dragonborn - Piano cover by Mark Fowler', player: 'youtube', uri: 'XQMnT9baoi8' },
-          { title: 'The Elder Scrolls: Skyrim Age of Aggression - Cover by Malukah', player: 'youtube', uri: 'XQMnT9baoi8' },
+          { id: 'l1', title: 'Game of Thrones - Main Title cover by Mark Fowler', player: 'youtube', uri: 'X6a9odk6b_c' },
+          { id: 'l2', title: 'The Lord of The Rings - Piano cover by Mark Fowler', player: 'youtube', uri: 'VsjzB7GRZeA' },
+          { id: 'l3', title: 'The Lord of The Rings - Cover by Linsay Stirling', player: 'youtube', uri: 'dQiNVk_u0po' },
+          { id: 'l4', title: 'The Elder Scrolls: Skyrim - Piano cover by Mark Fowler', player: 'youtube', uri: 'no3B0uS6nLk' },
+          { id: 'l5', title: 'The Elder Scrolls: Skyrim Dragonborn - Piano cover by Mark Fowler', player: 'youtube', uri: 'XQMnT9baoi8' },
+          { id: 'l6', title: 'The Elder Scrolls: Skyrim Age of Aggression - Cover by Malukah', player: 'youtube', uri: 'XQMnT9baoi8' },
         ]
       },
       {
+        id: 't2',
         part: 'p1',
         title: 'Japanese songs from anime',
         lessons: [
-          { title: 'Hotarubi No Mori E', player: 'youtube', uri: '5Y0LhI4pkas' },
-          { title: 'Sadness and Sorrow -Cover by Taylor Davis', player: 'youtube', uri: 'mF3DCa4TbD0' },
-          { title: 'Hokage funeral', player: 'youtube', uri: 'OJ4adTsgAPk' },
+          { id: 'l1', title: 'Hotarubi No Mori E', player: 'youtube', uri: '5Y0LhI4pkas' },
+          { id: 'l2', title: 'Sadness and Sorrow -Cover by Taylor Davis', player: 'youtube', uri: 'mF3DCa4TbD0' },
+          { id: 'l3', title: 'Hokage funeral', player: 'youtube', uri: 'OJ4adTsgAPk' },
         ]
       },
       {
+        id: 't3',
         part: 'p2',
         title: 'Most favirote song from the album',
         lessons: [
-          { title: 'Victory', player: 'youtube', uri: 'hKRUPYrAQoE' },
-          { title: 'Strength of a Thousand Men', player: 'youtube', uri: 'qwJj2EpC8vg' },
-          { title: 'Protectors of the Earth', player: 'youtube', uri: 'ASj81daun5Q' },
-          { title: 'Merchant Prince', player: 'youtube', uri: 'nziL13HF2DA' },
-          { title: 'Star Sky', player: 'youtube', uri: 'DUZCedq9a4Q' },
+          { id: 'l1', title: 'Victory', player: 'youtube', uri: 'hKRUPYrAQoE' },
+          { id: 'l2', title: 'Strength of a Thousand Men', player: 'youtube', uri: 'qwJj2EpC8vg' },
+          { id: 'l3', title: 'Protectors of the Earth', player: 'youtube', uri: 'ASj81daun5Q' },
+          { id: 'l4', title: 'Merchant Prince', player: 'youtube', uri: 'nziL13HF2DA' },
+          { id: 'l5', title: 'Star Sky', player: 'youtube', uri: 'DUZCedq9a4Q' },
         ]
       },
     ],
