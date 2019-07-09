@@ -1,6 +1,6 @@
 "use strict"
 
-const Contents = [
+const Content = [
   {
     id: 'c-01',
     topics: [
@@ -53,14 +53,24 @@ const Contents = [
   }
 ]
 
+const Progress = [
+  // {
+  //   uid: '4fc9d440-8f7a-11e9-95d5-315e185d3a06',
+  //   id: 'c-01',
+  //   progress: {
+  //     't1': { 'l1': true }
+  //   }
+  // }
+]
+
 module.exports = {
-  Contents: {
+  Content: {
     find({ id }, projection, done) {
       if ({}.toString.call(projection) === '[object Function]') {
         done= projection
       }
       setTimeout(() => {
-        const data = Contents.filter( _content => _content.id === id )
+        const data = Content.filter( _content => _content.id === id )
         if (data.length > 0) {
           let content = {}
           if ({}.toString.call(projection) === '[object Array]') {
@@ -86,5 +96,30 @@ module.exports = {
       }, 500)
       return this
     },
+  },
+  Progress: {
+    find({uid, id}, projection, done) {
+      if ({}.toString.call(projection) === '[object Function]') {
+        done= projection
+      }
+      setTimeout(() => {
+        const data =  Progress.filter( progress => progress.uid === uid && progress.id === id )
+        const res = data.map(item => { if (item && item.progress) { return {id: item.id, progress: item.progress} } })  // not return uid to client
+        done && done(res)
+      }, 500)
+    },
+    update({uid, id, progress}, done) {
+      setTimeout(() => {
+        const doc= Progress.find(p => p.id === id && p.uid === uid) || { uid, id, progress: {} }
+        for (let t in progress) {
+          const topic = progress[t]
+          doc.progress[t] = {...doc.progress[t], ...topic}
+        }
+        if (!(Progress.find( p => p.id === id && p.uid === uid))) {
+          Progress.push(doc)
+        }
+        done && done(null)
+      }, 500)
+    }
   }
 }
