@@ -63,6 +63,20 @@ const Progress = [
   // }
 ]
 
+const Enroll = [
+  {
+    courseId: 'c-01',
+    enrolledTo: '4fc9d440-8f7a-11e9-95d5-315e185d3a06',
+    enrolledAt: new Date(),
+    status: 'activated',
+    activatedBy: 'system-automation',
+    invoice: 'iv-001',
+    comments: [
+      { by: 'system', message: 'automatic enroll'}
+    ]
+  }
+]
+
 module.exports = {
   Content: {
     find({ id }, projection, done) {
@@ -119,6 +133,29 @@ module.exports = {
           Progress.push(doc)
         }
         done && done(null)
+      }, 500)
+    }
+  },
+  Enroll: {
+    find({courseId, enrolledTo}, projection, done) {
+      if ({}.toString.call(projection) === '[object Function]') {
+        done= projection
+      }
+      setTimeout(() => {
+        const data =  Enroll.filter( enroll => enroll.courseId === courseId && enroll.enrolledTo === enrolledTo )
+        if (data.length > 0) {
+          let res = {}
+          if ({}.toString.call(projection) === '[object Array]') {
+            projection.forEach( prop => {
+              res[prop] = data[0][prop]
+            })
+          } else {
+            res = {...data[0]}
+          }
+          done && done([res])
+        } else {
+          done && done([])
+        }
       }, 500)
     }
   }

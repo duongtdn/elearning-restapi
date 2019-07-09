@@ -12,6 +12,18 @@ function validateParams() {
   }
 }
 
+function checkEnrollStatus(helpers) {
+  return function(req, res, next) {
+   helpers.Collections.Enroll.find({courseId: req.query.c, enrolledTo: req.uid}, ['status'], (data) => {
+     if (data.length > 0 && data[0].status === 'activated') {
+       next()
+     } else {
+       res.status(403).json({ explaination: 'forbidden' })
+     }
+   })
+  }
+}
+
 function getContent(helpers) {
   return function(req, res) {
     helpers.Collections.Content.find({id: req.query.c}, (data) => {
@@ -24,4 +36,4 @@ function getContent(helpers) {
   }
 }
 
-module.exports = [validateParams, authen, getContent]
+module.exports = [validateParams, authen, checkEnrollStatus, getContent]
