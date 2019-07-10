@@ -49,6 +49,17 @@ const Content = [
     parts: [
       { id: 'p1', title: 'Cover Songs'},
       { id: 'p2', title: 'Two steps from hell'},
+    ],
+    note: 'Thank you for chosing our service and Welcome to class <span class="bold italic"> Basic C for Embedded </span>. \
+          During this class, you will learn about C programming Language and apply it to embedded project based on Arduino board. \
+          For study efficiency, we recommend you to look at the note after each lesson, and also practice with our quizzes. \
+          At the end, you can take an exam. Passing this exam will certify your C and Arduino skills at Novice level.',
+    materials: [
+      { title: 'Embedded Text Book. Second Edition', url: '', downloadable: false },
+      { title: 'GNU Compiler for C', url: '', downloadable: false },
+      { title: 'Course handout - Practice C Problems and Answers 1', url: '', downloadable: true },
+      { title: 'Course handout - Practice C Problems and Answers 2', url: '', downloadable: true },
+      { title: 'Course handout - Practice C Problems and Answers 3', url: '', downloadable: true },
     ]
   }
 ]

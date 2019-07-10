@@ -11,6 +11,9 @@ const app = express()
 
 app.use('/', api.generate())
 
+const path = require('path')
+app.use(express.static(path.join(__dirname, 'public')))
+
 const PORT = 3400
 app.listen(PORT, (err) => {
   if (err) {
