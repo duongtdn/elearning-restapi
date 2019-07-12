@@ -85,6 +85,26 @@ const Enroll = [
     invoice: 'iv-001',
     comments: [
       { by: 'system', message: 'automatic enroll'}
+    ],
+    tests: [
+      {
+        testId: 'test-01',
+        resultId: 'r-test-01',
+        title: 'Mid-term Exam',
+        description: 'Mid-term Test for course Embedded - 01',
+        result: {
+          score: 92,
+          status: 'passed'
+        },
+        passScore: 70
+      },
+      {
+        testId: 'test-02',
+        resultId: 'r-test-02',
+        title: 'Final Exam',
+        description: 'Final Test for course Embedded - 01',
+        passScore: 70
+      }
     ]
   }
 ]
