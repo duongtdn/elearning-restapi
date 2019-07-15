@@ -5,11 +5,15 @@ const fs = require("fs")
 createQuizzes()
 
 function createQuizzes() {
-  const quizChoice0 = createQuiz('choice-0.0')
-  const quizChoice1 = createQuiz('choice-0.1')
-  const quizText0 = createQuiz('text-0.0')
-  const quizText1 = createQuiz('text-0.1')
-  const quizDragDrop0 = createQuiz('dragdrop-0.0')
+  const quizChoice0 = createQuiz('choice-0.0', {'$1': false, '$2': true, '$3': false})
+  const quizChoice1 = createQuiz('choice-0.1', {'$1': false, '$2': true, '$3': false})
+  const quizText0 = createQuiz('text-0.0', {'$1': 'awesome',})
+  const quizText1 = createQuiz('text-0.1' , {'$1': 'awesome',})
+  const quizDragDrop0 = createQuiz('dragdrop-0.0', {
+    '$1': {top: 30, left: 150},
+    '$2': {top: 70, left: 150},
+    '$3': {top: 110, left: 150}
+  })
 
   const filename = {
     q0: `${__dirname}/quizzes/quiz-0.json`,
@@ -34,8 +38,7 @@ function createQuizzes() {
 
 }
 
-function createQuiz(name) {
-  const problem = JSON.parse(fs.readFileSync(`${__dirname}/quizzes/${name}`, 'utf8'))
-  const answer = {'$1': false, '$2': true, '$3': false}
+function createQuiz(name, answer) {
+  const problem = fs.readFileSync(`${__dirname}/quizzes/${name}`, 'utf8')
   return { problem, answer }
 }

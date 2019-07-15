@@ -13,7 +13,7 @@ app.use('/', api.generate())
 
 const path = require('path')
 app.use(express.static(path.join(__dirname, 'public')))
-app.use('/quizzes', (req, res, next) => setTimeout(next, 1000), express.static(path.join(__dirname, 'quizzes')))
+app.use('/quizzes', (req, res, next) => setTimeout(next, 200), express.static(path.join(__dirname, 'quizzes')))
 
 const PORT = 3400
 app.listen(PORT, (err) => {
