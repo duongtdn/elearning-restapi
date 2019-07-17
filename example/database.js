@@ -9,6 +9,7 @@ const Content = [
         part: 'p1',
         title: 'Epic songs cover from YOUTUBE',
         lessons: [
+          { id: 'q2', title: 'QUIZ - Topic FInal Test', player: 'QUIZ', src: 'quiz-3.json', },
           {
             id: 'q1', title: 'QUIZ - Example 1', player: 'QUIZ', src: 'quiz-0.json',
             // id: 'l1', title: 'Game of Thrones - Main Title cover by Mark Fowler', player: 'YOUTUBE', src: 'X6a9odk6b_c',
@@ -20,7 +21,7 @@ const Content = [
               {id: '4', player: 'YOUTUBE', src: 'qwJj2EpC8vg'},
             ]
           },
-          { id: 'q2', title: 'QUIZ - Topic FInal Test', player: 'QUIZ', src: 'quiz-3.json', },
+          
           { id: 'l2', title: 'The Lord of The Rings - Piano cover by Mark Fowler', player: 'YOUTUBE', src: 'VsjzB7GRZeA' },
           { id: 'l3', title: 'The Lord of The Rings - Cover by Linsay Stirling', player: 'YOUTUBE', src: 'dQiNVk_u0po' },
           { id: 'l4', title: 'The Elder Scrolls: Skyrim - Piano cover by Mark Fowler', player: 'YOUTUBE', src: 'no3B0uS6nLk' },
