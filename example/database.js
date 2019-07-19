@@ -9,7 +9,6 @@ const Content = [
         part: 'p1',
         title: 'Epic songs cover from YOUTUBE',
         lessons: [
-          { id: 'q2', title: 'QUIZ - Topic FInal Test', player: 'QUIZ', src: 'quiz-3.json', },
           {
             id: 'q1', title: 'QUIZ - Example 1', player: 'QUIZ', src: 'quiz-0.json',
             // id: 'l1', title: 'Game of Thrones - Main Title cover by Mark Fowler', player: 'YOUTUBE', src: 'X6a9odk6b_c',
@@ -21,8 +20,13 @@ const Content = [
               {id: '4', player: 'YOUTUBE', src: 'qwJj2EpC8vg'},
             ]
           },
-          
-          { id: 'l2', title: 'The Lord of The Rings - Piano cover by Mark Fowler', player: 'YOUTUBE', src: 'VsjzB7GRZeA' },
+          { id: 'q2', title: 'QUIZ - Topic FInal Test', player: 'QUIZ', src: 'quiz-3.json', },
+          { id: 'l2', title: 'The Lord of The Rings - Piano cover by Mark Fowler', player: 'YOUTUBE', src: 'VsjzB7GRZeA',
+            subLessons: [
+              {id: '0', player: 'PROMPT', src: '{"prompt":"Do you want to see next song?","buttons":[{"label":"Yes, I want to see"},{"label":"No, move to next lesson","action":{"skip":1}}]}'},
+              {id: '1', player: 'YOUTUBE', src: 'YHjA7nR1yYo'}
+            ]
+          },
           { id: 'l3', title: 'The Lord of The Rings - Cover by Linsay Stirling', player: 'YOUTUBE', src: 'dQiNVk_u0po' },
           { id: 'l4', title: 'The Elder Scrolls: Skyrim - Piano cover by Mark Fowler', player: 'YOUTUBE', src: 'no3B0uS6nLk' },
           { id: 'l5', title: 'The Elder Scrolls: Skyrim Dragonborn - Piano cover by Mark Fowler', player: 'YOUTUBE', src: 'XQMnT9baoi8' },
