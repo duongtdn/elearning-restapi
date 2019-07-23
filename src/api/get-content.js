@@ -15,7 +15,7 @@ function validateParams() {
 function checkEnrollStatus(helpers) {
   return function(req, res, next) {
    helpers.Collections.Enroll.find({courseId: req.query.c, enrolledTo: req.uid}, ['status', 'tests'], (data) => {
-     if (data.length > 0 && data[0].status === 'activated') {
+     if (data.length > 0 && data[0].status === 'resolved') {
        req.tests = data[0].tests
        next()
      } else {

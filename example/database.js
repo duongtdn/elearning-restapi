@@ -90,8 +90,8 @@ const Enroll = [
     courseId: 'c-01',
     enrolledTo: '4fc9d440-8f7a-11e9-95d5-315e185d3a06',
     enrolledAt: new Date(),
-    status: 'activated',
-    activatedBy: 'system-automation',
+    status: 'resolved',
+    resolvedBy: 'system-automation',
     invoice: 'iv-001',
     comments: [
       { by: 'system', message: 'automatic enroll'}
