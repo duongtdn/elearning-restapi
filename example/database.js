@@ -2,75 +2,190 @@
 
 const Content = [
   {
-    id: 'c-01',
-    topics: [
-      {
-        id: 't1',
-        part: 'p1',
-        title: 'Epic songs cover from YOUTUBE',
-        lessons: [
+    "id": "c-01",
+    "topics": [{
+        "id": "t1",
+        "part": "p1",
+        "title": "Epic songs cover from YOUTUBE",
+        "lessons": [{
+            "id": "q1",
+            "title": "QUIZ - Example 1",
+            "player": "QUIZ",
+            "src": "quiz-0.json",
+            "subLessons": [{
+                "id": "0",
+                "player": "YOUTUBE",
+                "src": "YHjA7nR1yYo",
+                "skip": 1
+              },
+              {
+                "id": "1",
+                "player": "YOUTUBE",
+                "src": "rZqJBjTP7Xk"
+              },
+              {
+                "id": "2",
+                "player": "QUIZ",
+                "src": "quiz-1.json"
+              },
+              {
+                "id": "3",
+                "player": "YOUTUBE",
+                "src": "hKRUPYrAQoE",
+                "skip": 1
+              },
+              {
+                "id": "4",
+                "player": "YOUTUBE",
+                "src": "qwJj2EpC8vg"
+              }
+            ]
+          },
           {
-            id: 'q1', title: 'QUIZ - Example 1', player: 'QUIZ', src: 'quiz-0.json',
-            // id: 'l1', title: 'Game of Thrones - Main Title cover by Mark Fowler', player: 'YOUTUBE', src: 'X6a9odk6b_c',
-            subLessons: [
-              {id: '0', player: 'YOUTUBE', src: 'YHjA7nR1yYo', skip: 1},
-              {id: '1', player: 'YOUTUBE', src: 'rZqJBjTP7Xk'},
-              {id: '2', player: 'QUIZ', src: 'quiz-1.json', },
-              {id: '3', player: 'YOUTUBE', src: 'hKRUPYrAQoE', skip: 1},
-              {id: '4', player: 'YOUTUBE', src: 'qwJj2EpC8vg'},
+            "id": "q2",
+            "title": "QUIZ - Topic FInal Test",
+            "player": "QUIZ",
+            "src": "quiz-3.json"
+          },
+          {
+            "id": "l2",
+            "title": "The Lord of The Rings - Piano cover by Mark Fowler",
+            "player": "YOUTUBE",
+            "src": "VsjzB7GRZeA",
+            "subLessons": [{
+                "id": "0",
+                "player": "PROMPT",
+                "src": "{\"prompt\":\"Do you want to see next song?\",\"buttons\":[{\"label\":\"Yes, I want to see\"},{\"label\":\"No, move to next lesson\",\"action\":{\"skip\":1}}]}"
+              },
+              {
+                "id": "1",
+                "player": "YOUTUBE",
+                "src": "YHjA7nR1yYo"
+              }
             ]
           },
-          { id: 'q2', title: 'QUIZ - Topic FInal Test', player: 'QUIZ', src: 'quiz-3.json', },
-          { id: 'l2', title: 'The Lord of The Rings - Piano cover by Mark Fowler', player: 'YOUTUBE', src: 'VsjzB7GRZeA',
-            subLessons: [
-              {id: '0', player: 'PROMPT', src: '{"prompt":"Do you want to see next song?","buttons":[{"label":"Yes, I want to see"},{"label":"No, move to next lesson","action":{"skip":1}}]}'},
-              {id: '1', player: 'YOUTUBE', src: 'YHjA7nR1yYo'}
-            ]
+          {
+            "id": "l3",
+            "title": "The Lord of The Rings - Cover by Linsay Stirling",
+            "player": "YOUTUBE",
+            "src": "dQiNVk_u0po"
           },
-          { id: 'l3', title: 'The Lord of The Rings - Cover by Linsay Stirling', player: 'YOUTUBE', src: 'dQiNVk_u0po' },
-          { id: 'l4', title: 'The Elder Scrolls: Skyrim - Piano cover by Mark Fowler', player: 'YOUTUBE', src: 'no3B0uS6nLk' },
-          { id: 'l5', title: 'The Elder Scrolls: Skyrim Dragonborn - Piano cover by Mark Fowler', player: 'YOUTUBE', src: 'XQMnT9baoi8' },
-          { id: 'l6', title: 'The Elder Scrolls: Skyrim Age of Aggression - Cover by Malukah', player: 'YOUTUBE', src: 'KNDT7EInclo' },
+          {
+            "id": "l4",
+            "title": "The Elder Scrolls: Skyrim - Piano cover by Mark Fowler",
+            "player": "YOUTUBE",
+            "src": "no3B0uS6nLk"
+          },
+          {
+            "id": "l5",
+            "title": "The Elder Scrolls: Skyrim Dragonborn - Piano cover by Mark Fowler",
+            "player": "YOUTUBE",
+            "src": "XQMnT9baoi8"
+          },
+          {
+            "id": "l6",
+            "title": "The Elder Scrolls: Skyrim Age of Aggression - Cover by Malukah",
+            "player": "YOUTUBE",
+            "src": "KNDT7EInclo"
+          }
         ]
       },
       {
-        id: 't2',
-        part: 'p1',
-        title: 'Japanese songs from anime',
-        lessons: [
-          { id: 'l1', title: 'Hotarubi No Mori E', player: 'YOUTUBE', src: '5Y0LhI4pkas' },
-          { id: 'l2', title: 'Sadness and Sorrow -Cover by Taylor Davis', player: 'YOUTUBE', src: 'mF3DCa4TbD0' },
-          { id: 'l3', title: 'Hokage funeral', player: 'YOUTUBE', src: 'OJ4adTsgAPk' },
+        "id": "t2",
+        "part": "p1",
+        "title": "Japanese songs from anime",
+        "lessons": [{
+            "id": "l1",
+            "title": "Hotarubi No Mori E",
+            "player": "YOUTUBE",
+            "src": "5Y0LhI4pkas"
+          },
+          {
+            "id": "l2",
+            "title": "Sadness and Sorrow -Cover by Taylor Davis",
+            "player": "YOUTUBE",
+            "src": "mF3DCa4TbD0"
+          },
+          {
+            "id": "l3",
+            "title": "Hokage funeral",
+            "player": "YOUTUBE",
+            "src": "OJ4adTsgAPk"
+          }
         ]
       },
       {
-        id: 't3',
-        part: 'p2',
-        title: 'Most favirote song from the album',
-        lessons: [
-          { id: 'l1', title: 'Victory', player: 'YOUTUBE', src: 'hKRUPYrAQoE' },
-          { id: 'l2', title: 'Strength of a Thousand Men', player: 'YOUTUBE', src: 'qwJj2EpC8vg' },
-          { id: 'l3', title: 'Protectors of the Earth', player: 'YOUTUBE', src: 'ASj81daun5Q' },
-          { id: 'l4', title: 'Merchant Prince', player: 'YOUTUBE', src: 'nziL13HF2DA' },
-          { id: 'l5', title: 'Star Sky', player: 'YOUTUBE', src: 'DUZCedq9a4Q' },
+        "id": "t3",
+        "part": "p2",
+        "title": "Most favirote song from the album",
+        "lessons": [{
+            "id": "l1",
+            "title": "Victory",
+            "player": "YOUTUBE",
+            "src": "hKRUPYrAQoE"
+          },
+          {
+            "id": "l2",
+            "title": "Strength of a Thousand Men",
+            "player": "YOUTUBE",
+            "src": "qwJj2EpC8vg"
+          },
+          {
+            "id": "l3",
+            "title": "Protectors of the Earth",
+            "player": "YOUTUBE",
+            "src": "ASj81daun5Q"
+          },
+          {
+            "id": "l4",
+            "title": "Merchant Prince",
+            "player": "YOUTUBE",
+            "src": "nziL13HF2DA"
+          },
+          {
+            "id": "l5",
+            "title": "Star Sky",
+            "player": "YOUTUBE",
+            "src": "DUZCedq9a4Q"
+          }
         ]
+      }
+    ],
+    "parts": [{
+        "id": "p1",
+        "title": "Cover Songs"
       },
+      {
+        "id": "p2",
+        "title": "Two steps from hell"
+      }
     ],
-    parts: [
-      { id: 'p1', title: 'Cover Songs'},
-      { id: 'p2', title: 'Two steps from hell'},
-    ],
-    note: '<p>Thank you for chosing our service and Welcome to class <span class="bold italic"> Basic C for Embedded </span>.<br /> \
-          During this class, you will learn about C programming Language and apply it to embedded project based on Arduino board. \
-          For study efficiency, we recommend you to look at the note after each lesson, and also practice with our quizzes.<br /> \
-          At the end, you can take an exam. Passing this exam will certify your C and Arduino skills at Novice level. \
-          <p class="w3-right">Yours Sincerely,<br />Instructor</p>',
-    materials: [
-      { title: 'Embedded Text Book. Second Edition', url: '', downloadable: false },
-      { title: 'GNU Compiler for C', url: '', downloadable: false },
-      { title: 'Course handout - Practice C Problems and Answers 1', url: '', downloadable: true },
-      { title: 'Course handout - Practice C Problems and Answers 2', url: '', downloadable: true },
-      { title: 'Course handout - Practice C Problems and Answers 3', url: '', downloadable: true },
+    "note": "<p>Thank you for chosing our service and Welcome to class <span class=\"bold italic\"> Basic C for Embedded </span>.<br /> During this class, you will learn about C programming Language and apply it to embedded project based on Arduino board. For study efficiency, we recommend you to look at the note after each lesson, and also practice with our quizzes.<br /> At the end, you can take an exam. Passing this exam will certify your C and Arduino skills at Novice level. <p class=\"w3-right\">Yours Sincerely,<br />Instructor</p>",
+    "materials": [{
+        "title": "Embedded Text Book. Second Edition",
+        "url": "https://google.com",
+        "downloadable": false
+      },
+      {
+        "title": "GNU Compiler for C",
+        "url": "https://google.com",
+        "downloadable": false
+      },
+      {
+        "title": "Course handout - Practice C Problems and Answers 1",
+        "url": "https://google.com",
+        "downloadable": true
+      },
+      {
+        "title": "Course handout - Practice C Problems and Answers 2",
+        "url": "https://google.com",
+        "downloadable": true
+      },
+      {
+        "title": "Course handout - Practice C Problems and Answers 3",
+        "url": "https://google.com",
+        "downloadable": true
+      }
     ]
   }
 ]
@@ -88,8 +203,8 @@ const Progress = [
 const Enroll = [
   {
     courseId: 'c-01',
-    enrolledTo: '4fc9d440-8f7a-11e9-95d5-315e185d3a06',
-    enrolledAt: new Date(),
+    enrollTo: '4fc9d440-8f7a-11e9-95d5-315e185d3a06',
+    enrollAt: new Date(),
     status: 'resolved',
     resolvedBy: 'system-automation',
     invoice: 'iv-001',
@@ -179,12 +294,12 @@ module.exports = {
     }
   },
   Enroll: {
-    find({courseId, enrolledTo}, projection, done) {
+    find({courseId, enrollTo}, projection, done) {
       if ({}.toString.call(projection) === '[object Function]') {
         done= projection
       }
       setTimeout(() => {
-        const data =  Enroll.filter( enroll => enroll.courseId === courseId && enroll.enrolledTo === enrolledTo )
+        const data =  Enroll.filter( enroll => enroll.courseId === courseId && enroll.enrollTo === enrollTo )
         if (data.length > 0) {
           let res = {}
           if ({}.toString.call(projection) === '[object Array]') {

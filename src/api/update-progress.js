@@ -1,16 +1,14 @@
 "use strict"
 
-const jwt = require('jsonwebtoken')
-
 const authen = require('../lib/authen')
 
 function validateParams() {
   return function(req, res, next) {
     if (req.body.id && req.body.progress) {
       next()
-      return
+    } else {
+      res.status(400).json({ error: 'Bad Parameters'})
     }
-    res.status(400).json({ explaination: 'invalid parameter'})
   }
 }
 
@@ -19,12 +17,22 @@ function updateProgress(helpers) {
     const uid = req.uid
     const id = req.body.id
     const progress = req.body.progress
-    helpers.Collections.Progress.update({ uid, id, progress }, (err) => {
-      if (err) {
-        res.status(500).json({ explaination: 'database access error'})
-      } else {
-        res.status(200).json({ progress })
-      }
+    const updateFn = req.body.setFlag?
+      helpers.Database.PROGRESS.set.bind(helpers.Database.PROGRESS)
+      :
+      helpers.Database.PROGRESS.update.bind(helpers.Database.PROGRESS)
+
+    updateFn({ uid, id }, { ...progress })
+    .then(data => {
+      res.status(200).json({ ...progress })
+    })
+    .catch(err => {
+      helpers.alert && helpers.alert({
+        action: 'Update Item from PROGRESS table',
+        message: 'Could not write to PROGRESS. Database operation failed',
+        error: err
+      })
+      res.status(500).json({ error: 'Failed to Access Database' })
     })
   }
 }

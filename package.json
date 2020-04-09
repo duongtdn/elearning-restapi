@@ -1,7 +1,7 @@
 {
-  "name": "elearning-api-core",
-  "version": "1.0.0",
-  "description": "express routes implemented apis for elearning server",
+  "name": "@elearn/elearning-restapi",
+  "version": "1.1.0",
+  "description": "express routes implemented APIs for elearning server",
   "main": "src/main.js",
   "scripts": {
     "test": "npm test",
@@ -9,20 +9,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/duongtdn/elearning-api-core.git"
+    "url": "git+https://github.com/duongtdn/elearning-restapi.git"
   },
   "author": "duongtdn",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/duongtdn/elearning-api-core/issues"
+    "url": "https://github.com/duongtdn/elearning-restapi/issues"
   },
-  "homepage": "https://github.com/duongtdn/elearning-api-core#readme",
+  "homepage": "https://github.com/duongtdn/elearning-restapi#readme",
   "dependencies": {
     "express-api-builder": "^1.3.0",
     "jsonwebtoken": "^8.5.1"
   },
   "devDependencies": {
-    "dotenv": "^8.0.0",
+    "@realmjs/dynamodb-helper": "^1.7.3",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1"
   }
 }
